@@ -1,21 +1,21 @@
 function generatePassword() {
   // This portion sets the length of the password. The logic states that a number must be slected between 8-128.
-var length = Number(prompt("How many characters would you like your password to be? (Must be bettwe 8-128 characters."));
-while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
+  var length = Number(prompt("How many characters would you like your password to be? (Must be bettwe 8-128 characters."));
+  while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
   // This portion requires a confirmation of character requirement for the password to work.
-var upper = confirm("Would you like to use uppercase letters?");
-var lower = confirm("Would you like to use lowercase letters?");
-var number = confirm("Would you like to use numbers?");
-var symbol = confirm("Would you like to use special characters?");
+  var upper = confirm("Uppercase letters?");
+  var lower = confirm("Lowercase letters?");
+  var number = confirm("Numbers?");
+  var symbol = confirm("Special characters?");
 
 
-while (!upper && !lower && !number && !symbol) {
-  alert("You must select at least one character type!");
-  upper = confirm("Would you like to use uppercase letters?");
-  lower = confirm("Would you like to use lowercase letters?");
-  number = confirm("Would you like to use numbers?");
-  symbol = confirm("Would you like to use special characters?");
-}
+  while (!upper && !lower && !number && !symbol) {
+    alert("You must select at least one character type!");
+    upper = confirm("Uppercase letters?");
+    lower = confirm("Lowercase letters?");
+    number = confirm("Numbers?");
+    symbol = confirm("Special characters?");
+  }
 
 
   // the password variable has been declared, but no value is assigned as the function will do that.
