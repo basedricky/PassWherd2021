@@ -1,24 +1,34 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+function generatePassword() {
+var length = Number(prompt("How many characters would you like your password to be? (Must be bettwe 8-128 characters."));
+while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
+
+var upper = confirm("Would you like to use uppercase letters?");
+var lower = confirm("Would you like to use lowercase letters?");
+var number = confirm("Would you like to use numbers?");
+var symbol = confirm("Would you like to use special characters?");
 
 
-// Arrays for characters to be used in the generator.
-
-var UpperCaseChar = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-var LowerCaseChar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-var SpecialChar = ['#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','['];
-var NumbericalChar = [0,1,2,3,4,5,6,7,8,9];
-
-function writePassword() {
- 
-  
- return result;
-//  var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
+while (!upper && !lower && !number && !symbol) {
+  alert("You must select at least one character type!");
+  upper = confirm("Would you like to use uppercase letters?");
+  lower = confirm("Would you like to use lowercase letters?");
+  number = confirm("Would you like to use numbers?");
+  symbol = confirm("Would you like to use special characters?");
 }
-console.log(writePassword(8));
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
+
+  var password = "";
+
+  var allowed = {};
+  if (upper) password += rando(allowed.upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (lower) password += rando(allowed.lower = "abcdefghijklmnopqrstuvwxyz");
+  if (number) password += rando(allowed.number = "1234567890");
+  if (symbol) password += rando(allowed.symbol = "!@#$%^&*(){}[]=<>/,.");
+
+  for (var i = password.length; i < length; i++) password += rando(rando(allowed).value);
+
+  document.getElementById("password").value = randoSequence(password).join("");
+}
+var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", generatePassword);
