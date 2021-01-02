@@ -22,6 +22,6 @@ User will then be prompted with a confirm for the character requirement and will
 
 Once all prompts/confirms have been successfully verified. A password will be generated and displayed. See Screenshots below.
 
-![Screenshot](<Assets>/Screenshot1.png?raw=true)
-![Screenshot](<Assets>/Screenshot2.png?raw=true)
-![Screenshot](<Assets>/Screenshot3.png?raw=true)
+![Screenshot](Assets/Screenshot1.PNG?raw=true)
+![Screenshot](Assets/Screenshot2.PNG?raw=true)
+![Screenshot](Assets/Screenshot3.PNG?raw=true)
