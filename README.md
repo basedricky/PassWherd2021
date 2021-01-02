@@ -22,4 +22,4 @@ User will then be prompted with a confirm for the character requirement and will
 
 Once all prompts/confirms have been successfully verified. A password will be generated and displayed. See Screenshots below.
 
-![Alt text](Assets\Screenshot 1.PNG?raw=true "Optional Title")
+![ScreenShot](Screenshot 1.png)
